@@ -1,89 +1,174 @@
-# Module 6: Synthesis
-**Produces: Section 5 (Cross-Design Comparison), Section 6 (SEO Implications), Section 7 (Roadmap), Section 8 (Sprint Summary Table), Section 9 (Open Questions)**
-
----
+# Module 6 — Stage 4: Synthesis
 
 ## Prerequisites
-- Module 1 (Foundation) loaded via URL field
-- Module 3 output pasted as context (Executive Summary, Sections 1–2)
-- Module 4 output pasted as context (Section 3 — Desktop Critique)
-- Module 5 output pasted as context (Section 4 — Mobile Critique)
+
+You must have read `module-1-foundation.md` and produced Stages 1, 2, and 3.
+
+Relevant foundation rules:
+- §6 (Specificity Rule) — applies to every roadmap row.
+- §7 (Severity Flag System) — applies to cross-device and roadmap tables.
+- §8 (Output Discipline) — particularly: no reframing language, no aspirational vocabulary.
+- §9 (Executive Summary Constraint) — binding.
+
+## Output
+
+Five sections, in order: Executive Summary, Section 5 (Cross-Device Comparison), Section 6 (SEO Context), Section 7 (Roadmap), Section 8 (Open Questions).
 
 ---
 
-## Instructions
+### Executive Summary
 
-### Step 5 — CROSS-DESIGN COMPARISON
+Per foundation §9. Constraints:
 
-Write Section 5. A table with columns: Issue | Desktop | Mobile | Flag | Priority. Each row is one issue present on at least one device. Prioritise rows by combined severity across both devices. Flag column: 🟥/🟨/🟩.
+1. **Open with one line** stating the structural problem the template has.
+2. **Name the single most critical immediate fix** in a dedicated paragraph or callout — the one thing that must ship before anything else.
+3. **List the three highest-leverage changes** that cover the majority of the measurable gap.
+4. **Cap at ~250 words.** If you exceed, cut.
 
----
+#### Forbidden patterns
 
-### Step 6 — SEO IMPLICATIONS
+- Reframing language ("reposition the page as", "transform from X to Y", "build an authority hub", "elevate to a destination")
+- Aspirational vocabulary without a measurable target
+- Strategy-deck phrasing
+- Bulleted lists where prose would carry the same content more decisively
 
-Write Section 6. Use the artist comparison table if available. Pattern to look for: the more SEO-dependent an artist page is, the worse its engagement metrics — because the template serves transactional intent, not discovery. Explain the SEO risk (dwell time and return-to-search signals). Confirm that UX fixes and SEO improvements are the same work.
+#### Required patterns
 
----
+- Specific metrics from Stage 1 (e.g. "61.5% of those return without acting")
+- Specific structural calls from Stages 2 and 3 (e.g. "Replace artist name + dates with the artwork title as the primary card heading")
+- A named priority (the single immediate fix)
 
-### Step 7 — ROADMAP
+#### Example opening (for format, not content)
 
-Write Section 7. Three tiers:
-
-**Immediate / A/B Test Candidates** — fixes requiring Low or Low-medium effort with high or critical severity. Each item: bold title with flag, what to change, how to test it (if an A/B), effort level.
-
-**Medium-Term Build** — fixes requiring Medium effort. Same format.
-
-**Long-Term / Strategic** — High effort or product-level decisions. Same format.
-
----
-
-### Step 8 — SPRINT SUMMARY TABLE
-
-Write Section 8. A table with columns: # | Issue | Severity | Effort | Flag | Tier. Sort by Tier then by Severity. This is the at-a-glance triage view.
-
----
-
-### Step 9 — OPEN QUESTIONS
-
-Write Section 9. List the specific data or research needed before roadmap decisions should be locked. Each question: one sentence naming the question, one sentence explaining why it matters for the roadmap. 4–6 questions maximum.
-
----
-
-### Step 10 — SELF-CONSISTENCY AUDIT (internal, not shown in output)
-
-Before finalising output, run this audit internally:
-
-1. Evidence labels vs severity:
-   - Any CONFIRMED finding rated above Critical? [should be impossible — flag if found]
-   - Any INFERRED finding rated Critical? [not allowed — downgrade to Major or add data]
-   - Any UNKNOWN finding rated Critical or Major? [not allowed — downgrade or reclassify]
-
-2. Traffic light flags vs severity:
-   - Any 🟥 flag on a non-Critical item? [fix flag or escalate severity]
-   - Any 🟩 flag on a Major or Critical item? [fix flag or downgrade severity]
-
-3. Roadmap vs severity:
-   - Any Critical finding not in Immediate or A/B tier? [escalate]
-   - Any Low severity item in Immediate tier without strong justification? [demote]
-
-4. Data claims vs verified figures:
-   - Any figure in the output that was not in the verified set from Step 0? [remove or verify]
-
-Resolve all contradictions. If contradictions cannot be resolved with available data, downgrade the severity and label the finding INFERRED or UNKNOWN.
-
-Only output the final sections after the audit passes.
+> The Artist Overview Page template is losing visitors at both ends. 86.7% arrive cold from organic search — they bounce above the artist pages average and dwell time across high-organic artist pages consistently falls below the template average. The 27.7% who actively evaluate a lot come back to the artist page without acting 61.5% of the time, and when they return, 79.2% go straight back to lots again. The template is generating a loop it was not built to break.
+>
+> These are structural failures. The card title format, filter hierarchy, lot grid default, and mobile filter architecture are the same across every artist page. Fixing the template fixes the catalogue.
+>
+> Three changes cover the majority of the measurable gap:
+> - Replace artist name + dates with the artwork title as the primary card heading
+> - Default the lot grid to upcoming/active lots and surface Sale Type and Availability as the first visible filters
+> - Add an artist-level Follow/Alert CTA in the hero area
+>
+> On mobile, one fix is required before anything else: move the floating chat widget off the first artwork image.
 
 ---
 
-## Output for this module
+### Section 5: Cross-Device Comparison
 
-Output Sections 5, 6, 7, 8, and 9. Do not repeat previous sections.
+Produce one table:
+
+| Issue | Desktop | Mobile | Flag | Priority |
+|-------|---------|--------|------|----------|
+
+#### Rules
+
+- One row per issue.
+- **Desktop** and **Mobile** columns: state severity on each device, or "Not present" if applicable.
+- **Flag** column: use the foundation §7 severity system. This is the cross-device severity, not device-specific.
+- **Priority** column: one of `Immediate` / `A/B Test` / `Medium-term` / `Long-term`.
+- Order rows by Priority (Immediate first), then by Flag severity (Critical first within each priority).
+
+Do not add prose around the table beyond a single sentence introducing it.
 
 ---
 
-## Reminders
-- The roadmap must be consistent with severity ratings from Sections 3 and 4
-- The sprint summary table is the at-a-glance view — it must match the roadmap exactly
-- Open questions should reference specific roadmap items that depend on the answer
-- Use persona names exactly as defined in Module 1
-- Apply severity calibration from Module 1
+### Section 6: SEO Context
+
+**3–4 short paragraphs, ~300 words maximum.** No table required. No subsection headers within the section.
+
+This is one of the shortest sections in the report. Its purpose is to establish that the existing UX recommendations already cover the SEO risk — not to produce a separate SEO workstream. Resist the model's default verbosity on SEO topics.
+
+#### Required content
+
+- The relationship between organic dependency and engagement quality across high-traffic artist pages — frame as a **pattern across the catalogue, not a single-instance problem**.
+- Specific Google quality signals at risk (dwell time, return-to-search) and why the data points to risk at template scale.
+- A single statement that UX fixes and SEO fixes are not separable in this case — the existing roadmap addresses both.
+
+#### Forbidden
+
+- Producing SEO recommendations separate from the UX roadmap.
+- Generic SEO advice ("add schema", "improve internal links", "add structured data") without tying it to the template-level problem and the existing roadmap.
+- Subsections like "6.1 Current SEO Strengths", "6.2 SEO Weaknesses", "6.3 SEO Opportunity Areas". This is a 3–4 paragraph section, not a chapter.
+- Bullet-listing SEO opportunities. The point is to fold SEO into the existing UX roadmap, not to enumerate a parallel one.
+
+#### Length check
+
+If your draft exceeds ~300 words, cut. If your draft has subsections, restructure as flowing paragraphs. If you find yourself producing an "SEO opportunity table", stop — that belongs in Section 7 if anywhere, and most SEO opportunities are already absorbed there.
+
+---
+
+### Section 7: Roadmap
+
+One table:
+
+| Feature | Priority | Description | Effort |
+|---------|----------|-------------|--------|
+
+#### Priority categories
+
+| Priority | When to use |
+|----------|-------------|
+| 🟥 **Immediate** | Ship as part of Phase 1 migration. No A/B test required because the change is data-confirmed or visual-evidence-confirmed. |
+| 🟨 **A/B Test** | Directionally supported but needs validation. Description column must include the test design summary. |
+| **Medium-term** | Phase 2 redesign scope. |
+| 🟩 **Long-term** | Multi-quarter, requires personalisation or data infrastructure. |
+
+#### Description column requirements
+
+- State the change specifically (per foundation §6).
+- For **A/B Test** items: include the hypothesis ("If... then...") and the primary metric to be measured. Where useful, also include the guardrail metric and decision rule.
+- For **Medium-term** and **Long-term** items: name the structural dependency (e.g. "requires live sales data feed by artist", "requires editorial template and content model changes", "requires personalisation infrastructure").
+
+#### Effort column
+
+One of: `Low` / `Low–Medium` / `Medium` / `High`. Include a one-clause justification where the effort is Medium or High (e.g. "Medium — requires mobile filter component redesign").
+
+#### Row ordering
+
+Order by Priority (Immediate first), then within each priority by Flag severity.
+
+---
+
+### Section 8: Open Questions
+
+Numbered list, **4–8 questions**.
+
+Each question must be **decision-forcing**, not reflective.
+
+#### Required format
+
+> **N. [Question]** — [If X, then implication A. If Y, then implication B.] [What data or test would resolve it.]
+
+#### Bad vs Good
+
+| Bad (reflective) | Good (decision-forcing) |
+|------------------|-------------------------|
+| "How do users feel about the new filters?" | "**Device split of the oscillation loop** — If the 61.5% oscillation is predominantly mobile, the fix is filter UX and above-fold hierarchy. If predominantly desktop, it is card design and information architecture. These need different solutions at different costs. Device-segmented journey data should be obtained before locking the roadmap sequence." |
+| "Should we add more content?" | "**Editorial drop-off root cause** — 53.2% Stories drop-off — is it content quality, the absent return path, or both? A short editorial funnel audit would sequence the investment correctly before any content budget is committed." |
+
+The point of an open question in this report is to flag where the **next decision depends on data we don't have**. Reflective questions go elsewhere.
+
+---
+
+## Quality Bar
+
+The synthesis **fails** if:
+
+- The executive summary uses reframing or aspirational language.
+- The cross-device comparison is prose rather than a table.
+- The roadmap separates SEO from UX recommendations.
+- Open questions are reflective rather than decision-forcing.
+- The "single most critical immediate fix" isn't named in the executive summary.
+- The roadmap omits effort estimates or omits A/B test design details for A/B items.
+- The executive summary exceeds ~250 words.
+
+## Common Failure Modes
+
+These produced the weaker prior version. Each is forbidden:
+
+- Executive summary that "repositions the page as an artist authority hub" without naming the specific changes.
+- Cross-device comparison given as prose rather than a flag/priority table.
+- SEO recommendations given as a separate roadmap workstream rather than absorbed into the UX recommendations.
+- Roadmap items with vague descriptions like "promote price filter" or "add available now module" without specifying the implementation.
+- Open questions phrased as research curiosity rather than decision forks.
+- Long sprint summary tables duplicating the roadmap with different labels.
