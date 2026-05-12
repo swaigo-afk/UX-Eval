@@ -150,6 +150,122 @@ The point of an open question in this report is to flag where the **next decisio
 
 ---
 
+## Reference Examples
+
+### Example — Complete Executive Summary (full prose, ~230 words)
+
+```
+The Artist Overview Page template is losing visitors at both ends. 86.7% arrive cold from organic search — they bounce above the artist pages average and dwell time across high-organic artist pages consistently falls below the template average. The 27.7% who actively evaluate a lot come back to the artist page without acting 61.5% of the time, and when they return, 79.2% go straight back to lots again. The template is generating a loop it was not built to break.
+
+These are structural failures. The card title format, filter hierarchy, lot grid default, and mobile filter architecture are the same across every artist page. Fixing the template fixes the catalogue.
+
+Three changes cover the majority of the measurable gap:
+- Replace artist name + dates with the artwork title as the primary card heading
+- Default the lot grid to upcoming/active lots and surface Sale Type and Availability as the first visible filters
+- Add an artist-level Follow/Alert CTA in the hero area
+
+On mobile, one fix is required before anything else: move the floating chat widget off the first artwork image.
+```
+
+Structure of the above:
+1. Para 1: problem statement with specific metrics (5 sentences)
+2. Para 2: structural framing — names the template-level diagnosis (3 sentences)
+3. Bulleted list: the three highest-leverage changes (the only bullet list in the exec summary, and only because these are genuinely enumerable)
+4. Para 3: the single critical immediate fix, named as its own statement
+
+Total: ~230 words. Under the 250 cap. No reframing language. No aspirational vocabulary.
+
+### Example — Complete SEO Context section (~210 words, 3 paragraphs)
+
+```
+High organic search dependency and weak engagement metrics co-occur across every high-traffic artist page — this is a template pattern, not an isolated instance problem. Across the top 25 artist pages, organic search accounts for 92.7% of traffic on average. Pages with the highest organic dependency consistently show above-average bounce rates and below-average dwell time relative to the template mean (37.6% bounce, 210.9s dwell time).
+
+The more SEO-dependent a page, the weaker its engagement. Google uses dwell time and return-to-search behaviour as quality signals. Sustained above-average bounce and below-average dwell time across 591,093 annual unique visitors creates a real, slow-building SEO risk at template scale.
+
+The UX fixes already identified in Section 7 address both problems simultaneously — no separate SEO workstream needed.
+```
+
+3 paragraphs. ~210 words. No table. No subsection headers (6.1, 6.2, 6.3). No bullet list of SEO opportunities. The point is to fold SEO into the existing UX roadmap, not to enumerate a parallel one.
+
+### Example — Complete Open Question (decision-forcing format)
+
+```
+**1. Device split of the oscillation loop** — If the 61.5% oscillation is predominantly mobile, the fix is filter UX and above-fold hierarchy. If predominantly desktop, it is card design and information architecture. These need different solutions at different costs. Device-segmented journey data should be obtained before locking the roadmap sequence.
+
+**2. Scroll depth at drop-off** — Does the 61.1% drop-off happen before the lot grid (above-fold failure) or after reaching it (card or filter failure)? Scroll depth data from Mouseflow would tell us which persona is primarily driving the primary metric and where to focus first.
+
+**3. Editorial drop-off root cause** — 53.2% Stories drop-off — is it content quality, the absent return path, or both? A short editorial funnel audit would sequence the investment correctly before any content budget is committed.
+
+**4. Mobile rendering bug on lot card titles** — Date range appears duplicated on several mobile cards. This needs to be confirmed as a bug and resolved before any A/B test on card title format — testing a broken component produces unreliable results.
+```
+
+Each question: bold label + decision fork (If X / If Y) + implication for each branch + what resolves it.
+
+### Example — Complete A/B Test roadmap row (Description includes test design)
+
+| Feature | Priority | Description | Effort |
+|---------|----------|-------------|--------|
+| Default to upcoming/active lots | 🟨 A/B Test | Default grid shows active and upcoming lots only; add "Show all including sold" toggle. **Hypothesis:** If active-intent visitors see only upcoming lots by default, click-through to lots will rise above the 23% baseline toward the 30% target. **Primary metric:** click-through to lots. **Guardrail:** filter use rate (should fall, indicating less compensatory filtering). **Decision rule:** ship if click-through ≥ 28% with no bounce rate increase. | Low–Medium |
+
+The Description column carries the test design inline — hypothesis, primary metric, guardrail metric, decision rule.
+
+### Failure examples — what NOT to produce
+
+**Bad exec summary (collapsed to bullets):**
+```
+Executive Summary
+
+Artist pages succeed as SEO landings and authority surfaces but fail as intent-resolution tools for buyers, especially on mobile.
+
+The core issue is structural:
+> Biography-first, one-size-fits-all templates block commercial intent.
+
+This creates clear opportunity for:
+- Phase 1: Reordering and surfacing intent without redesign
+- Phase 2: Template bifurcation by artist commercial profile
+```
+
+Why this fails:
+- 2 short sentences plus 2 bullets is not an executive summary
+- "Biography-first, one-size-fits-all templates block commercial intent" is reframing language, not a specific structural call
+- No specific metrics (61.5%, 86.7%, 0.095%, etc.)
+- No named critical immediate fix
+- No specific changes — "reordering and surfacing intent" is vague
+- "Template bifurcation by artist commercial profile" is strategy-deck phrasing
+
+**Bad SEO section (collapsed to table):**
+```
+| Signal | Impact | Action |
+|--------|--------|--------|
+| Strong organic entry | Positive | Preserve |
+| Long dwell time | Neutral (scanning) | Improve resolution |
+| High exits | Risk | Address structurally |
+| Category-scoped pages | Positive | Scale intentionally |
+```
+
+Why this fails:
+- SEO section is prose (foundation §11), not a table
+- "Improve resolution" / "Address structurally" are not specific
+- No mention of the template-level pattern across the catalogue
+- No mention that UX fixes and SEO fixes are the same work
+
+**Bad open questions (reflective, one-liners):**
+```
+1. Do we formally classify artists by commercial profile?
+2. Is "What can I buy now?" the primary buyer question?
+3. Should Artist + Category pages become first-class products?
+4. Are we willing to make biography visually secondary for buyers?
+```
+
+Why this fails:
+- All are reflective, not decision-forcing
+- No "If X then Y" forks
+- No data point that would resolve the question
+- No implication of cost or roadmap consequence
+- These belong in a strategy workshop, not an evaluation report's open questions
+
+---
+
 ## Quality Bar
 
 The synthesis **fails** if:
