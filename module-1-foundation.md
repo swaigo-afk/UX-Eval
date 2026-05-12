@@ -223,3 +223,110 @@ The prior version produced a Section 6 (SEO) of ~700 words and a Section 5 (Cros
 - Do not bold entire sentences.
 - Do not nest lists.
 - Do not produce a numbered list of one item.
+
+---
+
+## §11. Prose vs Table Reference
+
+A persistent failure mode is converting prose sections into tables. The structural rule:
+
+- **Tables** = structured data with consistent attributes per row (analytics metrics, persona-tagged findings, cross-device comparison, roadmap items).
+- **Prose** = synthesis, interpretation, narrative, executive framing, single-flow analysis.
+
+**Sections that are PROSE only:**
+- Executive Summary
+- Template Design paragraph (opening of Sections 3 and 4)
+- Journey Data Implications (closing of Sections 3 and 4)
+- Section 6 (SEO Context)
+
+**Sections that are TABLE only:**
+- Section 1.1, 1.2, 1.3 (Analytics)
+- Section 5 (Cross-Device Comparison)
+- Section 7 (Roadmap)
+
+**Sections with BOTH (prose + table):**
+- Section 3 (Desktop Critique): prose Template Design + table + prose Journey Implications
+- Section 4 (Mobile Critique): prose Template Design + optional callout + table + prose Journey Implications
+
+**Sections with structured blocks (NOT tables, NOT prose paragraphs):**
+- Section 2 (Friction Hypotheses): each hypothesis is a heading + meta line + 2–4 sentence prose body
+- Section 8 (Open Questions): each question is a heading + 2–4 sentence prose explanation
+
+If a section is specified as prose, do not collapse it into a table or bullet list. If a section is specified as structured blocks, do not collapse it into a table.
+
+---
+
+## §12. Verbiage Reference
+
+Concrete language patterns for the high-failure-mode sections.
+
+### Structural framing patterns (Section 2 hypothesis titles)
+
+Use one of these patterns for every confirmed hypothesis title:
+
+- `[X] is structural, not incidental`
+- `[Filters/Cards/Layout] [are/is] ordered by [X], not by [Y]`
+- `[X] is low because [Y] is in the wrong place`
+- `The [X] default is wrong for most [Y] visitors`
+- `[X] drives [Y] in but the template loses it`
+- `[X] is undesigned but significant`
+- `[Metric] gap reflects a template built for [X], not [Y]`
+
+**Worked examples:**
+- "Oscillation is structural, not incidental"
+- "Filters are ordered by prominence, not by use"
+- "Follow rate is low because the follow action is in the wrong place"
+- "The lot grid default is wrong for most active-intent visitors"
+- "Editorial drives traffic in but the template loses it"
+- "Lateral browsing is undesigned but significant"
+- "Dwell time gap reflects a template built for transactions, not discovery"
+
+### Persona + status line patterns
+
+- `**Personas:** [Persona1], [Persona2] | **CONFIRMED**`
+- `**Persona:** [Persona] | **CONFIRMED** — visual evidence from mobile screenshot`
+- `**Personas:** [Persona] | **INFERRED**`
+- `**Persona:** [Persona] | **NEEDS DATA** — device-segmented journey data required`
+
+### Recommendation phrasing patterns
+
+Each recommendation must be specific enough to ship. Use these patterns:
+
+| Pattern | Example |
+|---------|---------|
+| `Reorder X: A → B → C → D` | "Reorder sidebar: Category → Sale Type → Availability → Price" |
+| `Replace X with Y as the [position] [element]` | "Replace 'ARTIST NAME (DATES)' with artwork title as the dominant card heading" |
+| `Add X [position] on [device] (full-width on mobile)` | "Add artist-level Follow/Alert CTA below artist name on both desktop and mobile (full-width on mobile)" |
+| `Default X to Y; add Z toggle` | "Default grid to upcoming/active lots; add 'Show all including sold' toggle" |
+| `Move X to [position]` | "Move chat widget to bottom-right corner" |
+| `Promote X to [position]; remove Y from [position]` | "Promote artwork title to primary heading; remove artist name from lot cards on artist-specific page instances" |
+
+### Critical immediate fix callout pattern
+
+Single-sentence callout, starts with the action verb:
+
+> **Critical immediate fix:** Move the floating chat widget off the first artwork image — fixed in upper-right viewport, physically overlapping the first lot card's image.
+
+### Open question pattern (decision-forcing)
+
+Each question follows this structure: **bold question label** — sentence stating the fork. Then a sentence per branch with implication. Then a sentence on what data resolves it.
+
+> **1. Device split of the oscillation loop** — If the 61.5% oscillation is predominantly mobile, the fix is filter UX and above-fold hierarchy. If predominantly desktop, it is card design and information architecture. These need different solutions at different costs. Device-segmented journey data should be obtained before locking the roadmap sequence.
+
+### Preserve entry phrasing
+
+Each Preserve row: state what works for the persona in one or two phrases, then write `Preserve` in the recommendation column.
+
+| Persona | Flag | Finding | Recommendation |
+|---------|------|---------|----------------|
+| Seeker | ✓ | Filter sidebar structurally correct — Category, Sale Type, and Availability exist and serve this persona when found. Two-column grid gives reasonable scanning density. | Preserve |
+
+### Forbidden phrasings
+
+| Don't | Do |
+|-------|-----|
+| "Promote price filter" | "Reorder sidebar: Category → Sale Type → Availability → Price" |
+| "It appears users may struggle..." | "Users return without acting in 61.5% of sessions" |
+| "Reposition the page as an authority hub" | "Replace artist name + dates with the artwork title as the primary card heading" |
+| "How do users feel about filters?" | "If oscillation is predominantly mobile, the fix is filter UX. If desktop, card design. Device-segmented data resolves." |
+| "Improve hierarchy" | "Replace 'ARTIST NAME (DATES)' with artwork title as the dominant heading" |
