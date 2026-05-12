@@ -75,6 +75,79 @@ After the table, produce a short paragraph specific to mobile — particularly a
 
 ---
 
+## Reference Examples
+
+### Example — Template Design — Mobile paragraph (prose, descriptive)
+
+```
+Single-column layout on iPhone 14 Pro Max (visual review via screenshot). Above fold: nav bar, breadcrumb, artist name, truncated biography with "See more", a horizontal scrollable related artists strip, results count. A fixed chat button overlays the upper-right viewport, physically blocking the first lot card image. Below fold: full-width lot card images, artist name + dates as primary heading (date range duplicated on several cards — likely a rendering bug), artwork title in smaller text, price data, FOLLOW button. No filter controls visible anywhere without a deliberate tap to open a hidden drawer.
+```
+
+Note: descriptive prose only. Device and viewport stated. No evaluation here — the critique comes in the table.
+
+### Example — Critical Immediate Fix callout
+
+```
+> **Critical immediate fix:** Move the floating chat widget off the first artwork image — fixed in upper-right viewport, physically overlapping the first lot card's image. Move to bottom-right corner. No design cost.
+```
+
+This is one sentence (plus a fragment). Bolded label. Action-oriented. Specific. Above the table.
+
+### Example — Full mobile table rows with escalation language
+
+| Persona | Flag | Finding | Recommendation |
+|---------|------|---------|----------------|
+| Seeker | ✓ | Full-width artwork images at single-column width make individual works identifiable | Preserve |
+| Seeker | 🟥 | Filters hidden entirely — on desktop filters are always visible (if mis-ordered); on mobile there are no visible filter controls; Sale Type and Availability require finding and opening a hidden drawer. The desktop problem becomes a mobile crisis. | Persistent filter chip bar: Sale Type and Availability as always-visible tappable chips above the lot grid; secondary filters in a "More" drawer |
+| Seeker | 🟥 | Chat widget blocks the first artwork image — fixed in upper-right viewport, physically overlapping the first lot card's image; visually confirmed in the screenshot | Move to bottom-right corner |
+| Seeker | 🟥 | Card title more damaging at mobile width — "ARTIST NAME (DATES)", potentially duplicated, occupies the first 2–3 lines of a 430px viewport; artwork title requires active effort to find | Promote artwork title to primary heading; investigate date duplication as a rendering bug before A/B testing |
+| Regular Bidder | ✓ | Breadcrumb navigation gives fast orientation | Preserve |
+| Regular Bidder | 🟧 | No artist-level follow in the hero — higher impact on mobile than desktop; this persona's mobile use is monitoring-oriented; an artist-level alert is exactly what they would set during a check-in session | Full-width "Follow this artist" CTA in the hero area |
+| Casual Browser | ✓ | Related artists horizontal strip — serves the 6.5% lateral exit pattern (29,874 annual exits); concept is right | Preserve and invest in |
+| Casual Browser | 🟥 | Chat widget blocks the first artwork image — the primary engagement hook for this persona; blocking it at first impression is the most damaging single issue for the Casual Browser on mobile | Move to bottom-right immediately — no design cost |
+| Curious Owner | 🟩 | No selling entry point on mobile — same gap as desktop | Contextual selling link — same as desktop |
+
+Notes:
+- "The desktop problem becomes a mobile crisis" — explicit escalation language per the mobile-specific framing requirement
+- Chat widget appears twice with different persona framing — same fix, different persona impact, both Critical
+- All Critical flags justified by primary-metric driver, imagery blocking, or core flow obstruction
+
+### Example — Journey Data Implications — Mobile (prose)
+
+```
+The drop-off rate and oscillation loop are disproportionately likely to be mobile-driven given the high organic search and new visitor share. A Seeker arriving on mobile from a lot page faces hidden filters, a blocked first image, and harder card scanning. The template provides no mobile-specific mechanism to compensate. Calendar and Homepage — the two best-retention exits — are unreachable from mobile without deliberate off-page navigation. Neither has a surface in the mobile template.
+```
+
+5 sentences, flowing prose. Names the persona pattern, the structural gaps, the exit-surface gap. Connects mobile findings to journey data.
+
+### Failure example — what NOT to produce
+
+```
+4.1 Above-the-Fold (Mobile)
+| Element | Impact | Persona | Severity |
+| Bio compression | Inventory fully below fold | Buyer | 🔴 High |
+
+4.2 Inventory Scanning (Mobile)
+| Element | Impact | Persona | Severity |
+| Card height | Very low items per screen | Buyer | 🔴 High |
+
+4.3 Filters (Mobile)
+| Issue | Impact | Persona | Severity |
+| Modal-only filters | Activation cost | Buyer | 🔴 High |
+```
+
+Why this fails:
+- No Template Design paragraph (descriptive prose required)
+- No Critical Immediate Fix callout (chat widget blocking imagery is absent entirely)
+- Section split into mini-tables by element type rather than one persona-organised table
+- "Buyer" is not a defined persona
+- No Preserve entries
+- No Journey Data Implications closing paragraph
+- Recommendations missing entirely
+- Findings carry no data points or visual confirmation
+
+---
+
 ## Quality Bar
 
 The section **fails** if:
