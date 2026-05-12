@@ -8,48 +8,12 @@ Relevant foundation rules:
 - §6 (Specificity Rule) — applies to every roadmap row.
 - §7 (Severity Flag System) — applies to cross-device and roadmap tables.
 - §8 (Output Discipline) — particularly: no reframing language, no aspirational vocabulary.
-- §9 (Executive Summary Constraint) — binding.
 
 ## Output
 
-Five sections, in order: Executive Summary, Section 5 (Cross-Device Comparison), Section 6 (SEO Context), Section 7 (Roadmap), Section 8 (Open Questions).
+Four sections, in order: Section 5 (Cross-Device Comparison), Section 6 (SEO Context), Section 7 (Roadmap), Section 8 (Open Questions).
 
----
-
-### Executive Summary
-
-Per foundation §9. Constraints:
-
-1. **Open with one line** stating the structural problem the template has.
-2. **Name the single most critical immediate fix** in a dedicated paragraph or callout — the one thing that must ship before anything else.
-3. **List the three highest-leverage changes** that cover the majority of the measurable gap.
-4. **Cap at ~250 words.** If you exceed, cut.
-
-#### Forbidden patterns
-
-- Reframing language ("reposition the page as", "transform from X to Y", "build an authority hub", "elevate to a destination")
-- Aspirational vocabulary without a measurable target
-- Strategy-deck phrasing
-- Bulleted lists where prose would carry the same content more decisively
-
-#### Required patterns
-
-- Specific metrics from Stage 1 (e.g. "61.5% of those return without acting")
-- Specific structural calls from Stages 2 and 3 (e.g. "Replace artist name + dates with the artwork title as the primary card heading")
-- A named priority (the single immediate fix)
-
-#### Example opening (for format, not content)
-
-> The Artist Overview Page template is losing visitors at both ends. 86.7% arrive cold from organic search — they bounce above the artist pages average and dwell time across high-organic artist pages consistently falls below the template average. The 27.7% who actively evaluate a lot come back to the artist page without acting 61.5% of the time, and when they return, 79.2% go straight back to lots again. The template is generating a loop it was not built to break.
->
-> These are structural failures. The card title format, filter hierarchy, lot grid default, and mobile filter architecture are the same across every artist page. Fixing the template fixes the catalogue.
->
-> Three changes cover the majority of the measurable gap:
-> - Replace artist name + dates with the artwork title as the primary card heading
-> - Default the lot grid to upcoming/active lots and surface Sale Type and Availability as the first visible filters
-> - Add an artist-level Follow/Alert CTA in the hero area
->
-> On mobile, one fix is required before anything else: move the floating chat widget off the first artwork image.
+**Note: The Executive Summary is NOT produced at this stage.** It is held until Stage 5 (Module 7 — Report Assembly), where it is written with all sections in view. This avoids the failure mode of writing an executive summary before the synthesis is complete.
 
 ---
 
@@ -152,29 +116,6 @@ The point of an open question in this report is to flag where the **next decisio
 
 ## Reference Examples
 
-### Example — Complete Executive Summary (full prose, ~230 words)
-
-```
-The Artist Overview Page template is losing visitors at both ends. 86.7% arrive cold from organic search — they bounce above the artist pages average and dwell time across high-organic artist pages consistently falls below the template average. The 27.7% who actively evaluate a lot come back to the artist page without acting 61.5% of the time, and when they return, 79.2% go straight back to lots again. The template is generating a loop it was not built to break.
-
-These are structural failures. The card title format, filter hierarchy, lot grid default, and mobile filter architecture are the same across every artist page. Fixing the template fixes the catalogue.
-
-Three changes cover the majority of the measurable gap:
-- Replace artist name + dates with the artwork title as the primary card heading
-- Default the lot grid to upcoming/active lots and surface Sale Type and Availability as the first visible filters
-- Add an artist-level Follow/Alert CTA in the hero area
-
-On mobile, one fix is required before anything else: move the floating chat widget off the first artwork image.
-```
-
-Structure of the above:
-1. Para 1: problem statement with specific metrics (5 sentences)
-2. Para 2: structural framing — names the template-level diagnosis (3 sentences)
-3. Bulleted list: the three highest-leverage changes (the only bullet list in the exec summary, and only because these are genuinely enumerable)
-4. Para 3: the single critical immediate fix, named as its own statement
-
-Total: ~230 words. Under the 250 cap. No reframing language. No aspirational vocabulary.
-
 ### Example — Complete SEO Context section (~210 words, 3 paragraphs)
 
 ```
@@ -210,28 +151,6 @@ Each question: bold label + decision fork (If X / If Y) + implication for each b
 The Description column carries the test design inline — hypothesis, primary metric, guardrail metric, decision rule.
 
 ### Failure examples — what NOT to produce
-
-**Bad exec summary (collapsed to bullets):**
-```
-Executive Summary
-
-Artist pages succeed as SEO landings and authority surfaces but fail as intent-resolution tools for buyers, especially on mobile.
-
-The core issue is structural:
-> Biography-first, one-size-fits-all templates block commercial intent.
-
-This creates clear opportunity for:
-- Phase 1: Reordering and surfacing intent without redesign
-- Phase 2: Template bifurcation by artist commercial profile
-```
-
-Why this fails:
-- 2 short sentences plus 2 bullets is not an executive summary
-- "Biography-first, one-size-fits-all templates block commercial intent" is reframing language, not a specific structural call
-- No specific metrics (61.5%, 86.7%, 0.095%, etc.)
-- No named critical immediate fix
-- No specific changes — "reordering and surfacing intent" is vague
-- "Template bifurcation by artist commercial profile" is strategy-deck phrasing
 
 **Bad SEO section (collapsed to table):**
 ```
@@ -270,21 +189,19 @@ Why this fails:
 
 The synthesis **fails** if:
 
-- The executive summary uses reframing or aspirational language.
 - The cross-device comparison is prose rather than a table.
 - The roadmap separates SEO from UX recommendations.
 - Open questions are reflective rather than decision-forcing.
-- The "single most critical immediate fix" isn't named in the executive summary.
 - The roadmap omits effort estimates or omits A/B test design details for A/B items.
-- The executive summary exceeds ~250 words.
+- An Executive Summary is produced at this stage (the Exec Summary is held until Stage 5 — Module 7).
 
 ## Common Failure Modes
 
 These produced the weaker prior version. Each is forbidden:
 
-- Executive summary that "repositions the page as an artist authority hub" without naming the specific changes.
 - Cross-device comparison given as prose rather than a flag/priority table.
 - SEO recommendations given as a separate roadmap workstream rather than absorbed into the UX recommendations.
 - Roadmap items with vague descriptions like "promote price filter" or "add available now module" without specifying the implementation.
 - Open questions phrased as research curiosity rather than decision forks.
 - Long sprint summary tables duplicating the roadmap with different labels.
+- Writing an Executive Summary at this stage rather than holding it for Stage 5 assembly.
