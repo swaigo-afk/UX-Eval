@@ -119,6 +119,61 @@ Apply foundation §7. Every hypothesis gets a flag. A hypothesis with a Critical
 
 ---
 
+## Reference Examples
+
+### Example 1 — Critical, CONFIRMED hypothesis
+
+```
+### H1 🟥 — Oscillation is structural, not incidental
+
+**Personas:** Seeker, Regular Bidder | **CONFIRMED**
+
+27.7% of sessions navigate to live lot pages. 61.5% of those return without acting. Of the continuing visits, 79.2% go straight back to lots — a higher proportion than at first pass. At 12-month scale, 56,406 sessions are caught in this loop annually. The template provides no information at artist level to resolve a lot evaluation, so users loop between pages looking for what they need. The card title format is the most direct structural cause.
+```
+
+### Example 2 — Major, CONFIRMED with visual evidence
+
+```
+### H3 🟧 — Lot card title makes scanning slower than it should be
+
+**Persona:** Seeker | **CONFIRMED** — visual evidence from mobile screenshot
+
+Every card leads with artist name and date range in the largest, boldest text. On an artist-dedicated page, this is redundant. The artwork title — the differentiating signal — appears below in smaller, lighter text. On mobile, several cards show the date range duplicated, likely a rendering bug. Visually confirmed: the artwork title requires deliberate effort to read. This is the most direct structural contributor to the 61.5% oscillation rate.
+```
+
+### Example 3 — Moderate, CONFIRMED
+
+```
+### H4 🟨 — Follow rate is low because the follow action is in the wrong place
+
+**Persona:** Regular Bidder | **CONFIRMED**
+
+The artist pages average follow rate is 0.095%. The only follow mechanism is a card-foot button below price data. There is no artist-level alert anywhere in the hero or page header. The gap is structural: the action is placed where a user must already be engaged with a specific lot to find it.
+```
+
+### Failure example — what NOT to produce
+
+```
+H1 — Artist pages are SEO-optimised but not intent-resolving
+
+• Evidence: 93% organic entry, 61% exit, 23% click-through
+• Persona: Buyer
+• Severity: 🔴 High
+```
+
+Why this fails:
+- Title is descriptive, not structural (foundation §3 violation)
+- Body collapsed into bullets, not 2–4 sentence prose (foundation §11 violation — prose required for hypothesis bodies)
+- Persona name "Buyer" doesn't exist in foundation §1 — must use defined persona names
+- No status (CONFIRMED/UNCONFIRMED/NEEDS DATA)
+- No specific structural cause named
+- No 12-month scale impact projection
+- Evidence is a list of three loose metrics, not a connected mechanism
+
+**The correct format is heading + meta line + flowing prose body. Bullets inside a hypothesis are forbidden.**
+
+---
+
 ## Quality Bar
 
 A hypothesis **fails** the quality bar if:
