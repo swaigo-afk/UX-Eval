@@ -330,3 +330,72 @@ Each Preserve row: state what works for the persona in one or two phrases, then 
 | "Reposition the page as an authority hub" | "Replace artist name + dates with the artwork title as the primary card heading" |
 | "How do users feel about filters?" | "If oscillation is predominantly mobile, the fix is filter UX. If desktop, card design. Device-segmented data resolves." |
 | "Improve hierarchy" | "Replace 'ARTIST NAME (DATES)' with artwork title as the dominant heading" |
+
+---
+
+## §13. Anti-Compression Rule (BINDING — HIGHEST PRIORITY)
+
+The most common output failure is compression — producing structurally correct but thin output. This rule overrides any inclination to "be concise" or "cover the key points."
+
+### Reference examples are MINIMUMS, not targets
+
+Every reference example in this foundation file and in each stage module shows the **minimum required depth**. Production output should match or exceed the example. Below the example is a failure.
+
+If a module shows a 10-row example table, 10+ rows is the target. 5 rows is a failure. If a module shows a 230-word example paragraph, 200+ words is required. 80 words is a failure.
+
+### Format conversion is forbidden
+
+If a stage module specifies a **table**, produce a table. Do not convert to bullets. Do not convert to prose. Do not produce a mini-table with 2 rows.
+
+If a stage module specifies **prose paragraphs**, produce prose paragraphs. Do not convert to bullets. Do not convert to a table. Do not produce a 2-sentence summary.
+
+If a stage module specifies a **structured block format** (e.g. hypotheses, open questions), produce that exact format. Do not convert to a bulleted list.
+
+### Hard minimums per section
+
+These are **floors**, not targets. Output below these is a failure that must be expanded before shipping.
+
+| Output | Hard minimum |
+|--------|--------------|
+| Section 1.1 Adobe Analytics table | 7 metric rows |
+| Section 1.2 Mouseflow Journey table | 8 metric rows |
+| Section 1.3 Filter Behaviour table | 6 filter rows |
+| Section 2 Friction Hypotheses | 6 hypotheses, each with 3+ sentences of evidence prose |
+| Section 3 Template Design paragraph | 4 sentences of descriptive prose |
+| Section 3 Desktop Critique table | 10 rows total; minimum 2 rows per persona (1 Preserve + 1 issue) |
+| Section 3 Journey Data Implications | 3 sentences of prose |
+| Section 4 Template Design — Mobile paragraph | 4 sentences |
+| Section 4 Critical Immediate Fix callout | 1 sentence in `>` blockquote format (if applicable) |
+| Section 4 Mobile Critique table | 8 rows total; minimum 2 rows per persona |
+| Section 4 Journey Data Implications | 3 sentences |
+| Section 5 Cross-Device table | 6 rows; all 5 columns populated (Issue, Desktop, Mobile, Flag, Priority) |
+| Section 6 SEO Context | 3 paragraphs, 200 words minimum, 300 max. **Bullets, tables, and subsection headers are forbidden in Section 6.** |
+| Section 7 Roadmap table | 8 rows; all 4 columns populated (Feature, Priority, Description, Effort) |
+| Section 7 A/B Test rows | Description column must include hypothesis + primary metric + decision rule |
+| Section 8 Open Questions | 4 questions, each 3+ sentences in decision-fork format |
+| Executive Summary | 180 words minimum, 250 max |
+| Title Block | All 5 fields populated (Template scope, Reference instance, Date, Adobe Analytics period, Mouseflow period, Mobile device) |
+
+### Compression check (apply at each stage before outputting)
+
+Before producing the final output of any stage, ask:
+
+1. Does each section meet its hard minimum from the table above?
+2. Have I converted any table to bullets or prose? Revert.
+3. Have I converted any prose section to bullets or a table? Revert.
+4. Have I produced "key points" instead of full evidence? Expand.
+5. Does this section feel terse? It probably is. Expand.
+
+If any answer indicates compression, expand before shipping the stage output.
+
+### Self-talk that signals compression
+
+If you find yourself thinking any of the following, stop and expand:
+
+- "I've covered the key points concisely"
+- "Bullets are clearer here"
+- "This is the most important content"
+- "A short summary captures it"
+- "The reader will get the idea"
+
+This report's purpose is structural detail at stakeholder-decision depth. Concision is a failure mode, not a virtue.
